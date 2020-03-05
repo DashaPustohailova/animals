@@ -43,3 +43,14 @@ ul {
 .find_friend {
     display: none;
 }
+
+.up_button {
+    /*позиционированние top - верх*/
+    position: fixed;
+    right: 10px;
+    bottom: 10px; /*отступ снизу*/
+    width: 50px;
+    height: 50px;
+    background: aqua;
+    border-radius: 50px;
+}

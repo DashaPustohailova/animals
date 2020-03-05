@@ -1,0 +1,11 @@
+fieldset {
+    border: 1px solid aqua; /* размер рамки.тип рамки. цвет рамки*/
+}
+
+/*селектор атрибута*/
+input[type="submit"] { /*стиль будет применен ко всем импутам с типом submit*/
+    border: 0; /*если хотим убрать рамку*/
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: aqua;
+}
