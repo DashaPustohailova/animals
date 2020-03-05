@@ -1,0 +1,83 @@
+<! -- текст комментария -- >
+<! DOCTYPE html>
+<html>
+
+<head>
+    <! -- служебные теги, не видны на сайте -- >
+    <meta charset="UTF-8">   <! -- указываем кодировку УКАЗЫВАЕТСЯ ОБЯЗАТЕЛЬНО, остальные мета-теги не обязательны-- >
+    <meta name="description" content="приют для животных"> <! --основной смысл странички-- >
+    <meta name="'keywords" content="animals,cats,dogs"> <! --ключевые слова странички, не все поисковики их используют-- >
+    <meta name="'author" content="GRW-10>"><! --указываем авора страницы-- >
+
+    <link rel="stylesheet" href="css/style.css">
+    <title> Главная </title>
+</head>
+
+<body>
+<! --  видимые элементы -- >
+<header>  <!--отображение верхней части сайти(нафигация, небольшая форма входа, поиск, логотип, НЕЛЬЗЯ РАЗМЕЩАТЬ ТЕСТ,СИМАНТИЧЕСКИЙ ТЕГ-->
+    <nav>  <!-- навигация, т.е. меню-->
+        <ul><!--границы маркированного списка(те без цифр)-->
+            <li>
+                <a href="main.html">Главная страница</a>
+            </li>
+            <li>Животные
+                <ul>  <!-- выпадающий список (подменю, submenu)-->
+                    <li>
+                        <a href="animals.html">Кошки</a> <!-- a -  ссылка-->
+                        </li>
+                        <li>
+                           <a href="#">Собаки</a> <!-- #-заглушка, те пока не переходи по ссылке(чтобы на создавать одинаковые странички) -->
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="search.html">Найти друга</a>
+            </li>
+            <li>
+                <a href="contacts.html">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="find_friend"><!--теш-контейнер(группирует несколько элементов), не симантический-->
+        <p>Найти друга</p> <!--текстовый абзац-->
+        <p>+7 (999) 999-99-99</p>
+    </div>
+</header>
+<main>Основное содержание</main> <!-- Основное содержание -->
+<footer>  <!--"подвал сайта", симантический тег-->
+    <section>
+        <h5>О нас</h5><!--Тег заголовка-->
+        <nav>
+            <a href="#">Правила сайта</a>
+            <a href="#">Вакансии</a>
+            <a href="#">Информация</a>
+        </nav>
+    </section>
+    <section>
+        Написать нам
+        <form name="write_us" action="#" method="post"> <!--action="#" отправка на сервер-->
+            <input type="email" placeholder="e-mail" name="email">
+            <input type="text" placeholder="имя" name="name">
+            <textarea placeholder="текст сообщения" name="text">
+            </textarea>
+            <input type="submit" value="Написать нам">
+        </form>
+
+    </section>
+    <section>
+        <h5>Помощь</h5>
+    </section>
+    <section>
+        <h5>Соц.сети</h5>
+        <nav>
+            <a href="#">Inst</a>
+            <a href="#">Fb</a>
+            <a href="#">Tw</a>
+        </nav>
+    </section>
+</footer>
+
+</body>
+</html>

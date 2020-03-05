@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление животного</title>
+</head>
+<body>
+<form enctype="multipart/form-data" name="add_animal" action="#" method="post"> <!--enctype="multipart/form-data" если предпологаем загрузку-->
+    <p>Форма добавления животного</p>
+    <div>
+        <label for="name">Имя животного</label>
+        <input minlength="2" maxlength="10" id="name" type="text" name="animal_name" placeholder="имя"><!--value - их надо стирать(не опдсказки), это пользовательская подсказка.placeholder - подсказка для пользователя
+        required  валидация вводимых данных на уровне html, если ввели имя короче или длиннее нужного, форма не отправится-->
+    </div>
+
+    <div>
+        <label for="age">Возраст животного</label>
+        <input name="age" id="age" type="number" min="0" max="30"> <!--мин и макс - диапазон чисел-->
+    </div>
+
+    <div>
+        <label for="description">Описание животного</label>
+        <textarea minlength="20" name="description" id="description" placeholder="Введите описание животного"></textarea> <!--name id никак не связаны, т.е могут иметь или не иметь одинаковые имена-->
+    </div>
+
+    <div>
+        <label for="photo">Фотографии животного</label>
+        <!--          <input type="file" name="photo"> позволяет загрузить только один файл. multiple - чтобы загружать несколько+значок массива в имени/ accept=""  - ограничение типов файла-->
+        <input multiple id="photo" type="file" accept="image/*" name="photo[]">
+    </div>
+
+    <div>
+        <label for="birth">Дата рождения</label>
+        <input id="birth" name="birth" type="date"> <!--Отображаются во всех браузерах по-разному, это плохо если у нас на дате и времени завязана логика, например если это бронирование, с этим разбирается js-->
+    </div>
+
+    <div>
+        <label for="category">Категория</label>
+        <select required id="category" name="category" size="2">
+            <option value="cat">Кошка</option>
+            <option value="dog">Собака</option>
+        </select>
+    </div>
+
+    <div>
+        <legend>Пол животного</legend>
+        <label>
+            <input type="radio" name="gender" value="male">
+            Мальчик
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female">
+            Девочка
+        </label>
+    </div>
+
+
+    <div>
+        <legend>Цвет животного</legend>
+        <label>
+            <input type="radio" name="color" value="white">
+            Белый
+        </label>
+        <label>
+            <input type="radio" name="color" value="grey">
+            Серый
+        </label>
+        <label>
+            <input type="radio" name="color" value="black">
+            Черный
+        </label>
+    </div>
+</form>
+</body>
+</html>

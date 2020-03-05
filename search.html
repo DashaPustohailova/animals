@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru"> <!--указание на язык страницы-->
+<head>
+    <meta charset="UTF-8">
+    <title> Найти друга</title>
+</head>
+<body>
+<form name="search" action="#" method="post">
+    <!--form ставим обязательно когда создаем форму
+    actiom - обработчик формы
+    method - метод передачи
+     name - для работы с элементами формы на javaskript и чтобы могли получить данные на сервере-->
+    <p>Заполните форму ниже и мы подберем вам питомца</p>
+    <fieldset>   <!--для группировки полей формы(в другом месте использовать нельзя) Можно не использовать-->
+        <legend>Кого вы ищете?</legend> <!--используется вместе с fieldset-->
+
+        <label for="category">Пожелания</label><!--цепляется к ждемеенту форм Текстовая метка для элемента for - это связка-->
+        <select id="category" name="category" size="2"><!--Выпадающий список(границы списка) name для получение данных на сервере атрибут  multiple для множественного выбора size="2"- указываем сколько элементов списка будет видно-->
+            <option value="cat">Кошка</option> <!--элементы <списка value-пользовательский выбор-->
+            <option selected value="dog">Собака</option>
+        </select>
+    </fieldset>
+
+    <fieldset disabled>
+        <legend>Размер будущего питомца</legend>
+        <label>
+            <input type="checkbox" name="size[]" value="small"> <!--тег одиночка-->
+            Маленькие
+        </label>
+        <label>
+            <input type="checkbox" name="size[]" value="medium"> <!--тег одиночка-->
+            Средние
+        </label>
+        <label>
+            <input type="checkbox" name="size[]" value="big"> <!--тег одиночка-->
+            Крупные
+        </label>
+        <label>
+            <input checked type="checkbox" name="size[]" value="all"> <!--тег одиночка-->
+            Не имеет значения
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Пол будущего питомца</legend>
+        <label>
+            <input type="radio" name="gender" value="male"> <!--у радио кнопок нет возможности множественного имени, name должен быть у всех одинаковый-->
+            Мальчик
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female">
+            Девочка
+        </label>
+        <label>
+            <input checked type="radio" name="gender" value="any">
+            Не имеет значения
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Какого цвета должен быть питомец?</legend>
+        <label>
+            <input type="checkbox" name="color[]" value="white">
+            Белый
+        </label>
+        <label>
+            <input type="checkbox" name="color[]" value="grey">
+            Серый
+        </label>
+        <label>
+            <input type="checkbox" name="color[]" value="black">
+            Черный
+        </label>
+        <label>
+            <input checked type="checkbox" name="color[]" value="any">
+            Не имеет значения
+        </label>
+    </fieldset>
+
+    <input type="submit" value="Подобрать питомца"><!--Отправка данных-->
+    <input type="reset" value="Очистить форму">
+    <!--<input type="button" value="Просто кнопка"> это для js      -->
+</form>
+</body>
+</html>
